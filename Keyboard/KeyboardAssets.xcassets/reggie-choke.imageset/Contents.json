@@ -3,15 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
+      "filename" : "choke_sportmoji-03-1.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
       "filename" : "choke_sportmoji-03.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "choke_sportmoji-03-2.png"
     }
   ],
   "info" : {

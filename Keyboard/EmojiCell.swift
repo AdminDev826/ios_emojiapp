@@ -9,7 +9,6 @@
 import UIKit
 
 class EmojiCell: UICollectionViewCell {
-    @IBOutlet var cellImage: UIImageView?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,7 +18,9 @@ class EmojiCell: UICollectionViewCell {
         super.init(coder: aDecoder)
     }
     
-    func setImage(image: UIImage!) {
-        cellImage?.image = image
+    override var bounds: CGRect {
+        didSet {
+            contentView.frame = bounds
+        }
     }
 }

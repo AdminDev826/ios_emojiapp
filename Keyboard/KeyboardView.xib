@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="Keyboard" customModuleProvider="target">
@@ -14,57 +14,96 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ve-dO-GmO">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ve-dO-GmO">
                     <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="ZtJ-bw-uRk"/>
+                        <constraint firstAttribute="width" constant="32" id="geO-h4-f9n"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJP-mP-kNY">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJP-mP-kNY">
                     <rect key="frame" x="0.0" y="81" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="ntU-kQ-xnP"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ama-xB-Gxs">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ama-xB-Gxs">
                     <rect key="frame" x="0.0" y="40" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="LWd-T1-78O"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACe-8q-8rg">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACe-8q-8rg">
                     <rect key="frame" x="0.0" y="121" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="kaY-yQ-7nD"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-Mn-slq">
-                    <rect key="frame" x="0.0" y="188" width="32" height="32"/>
-                    <state key="normal" title="Button" image="globe">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="nextKeyboardButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="WhZ-W3-Ear"/>
-                    </connections>
-                </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dOV-0Y-Zcl">
-                    <rect key="frame" x="40" y="1" width="280" height="219"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dOV-0Y-Zcl">
+                    <rect key="frame" x="40" y="0.0" width="280" height="220"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UA2-k1-RDY">
                         <size key="itemSize" width="80" height="80"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B3-9I-Oum">
+                    <rect key="frame" x="0.0" y="188" width="32" height="32"/>
+                    <state key="normal" image="globe">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="leading" secondItem="Ama-xB-Gxs" secondAttribute="trailing" constant="8" symbolic="YES" id="1oX-5h-i4U"/>
+                <constraint firstItem="4ve-dO-GmO" firstAttribute="leading" secondItem="Ama-xB-Gxs" secondAttribute="leading" id="74Z-68-iMn"/>
+                <constraint firstItem="Ama-xB-Gxs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ajx-as-Gee"/>
+                <constraint firstAttribute="trailing" secondItem="dOV-0Y-Zcl" secondAttribute="trailing" id="Ar6-4k-GVc"/>
+                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="leading" secondItem="ACe-8q-8rg" secondAttribute="trailing" constant="8" symbolic="YES" id="B4Y-zW-9WZ"/>
+                <constraint firstItem="Ama-xB-Gxs" firstAttribute="top" secondItem="4ve-dO-GmO" secondAttribute="bottom" constant="8" symbolic="YES" id="Huy-pV-rgp"/>
+                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="top" secondItem="4ve-dO-GmO" secondAttribute="top" id="KMV-hf-qEv"/>
+                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="leading" secondItem="ZJP-mP-kNY" secondAttribute="trailing" constant="8" symbolic="YES" id="NRm-Zi-ezb"/>
+                <constraint firstItem="ZJP-mP-kNY" firstAttribute="top" secondItem="Ama-xB-Gxs" secondAttribute="bottom" constant="9" id="Ug5-oX-7iU"/>
+                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="leading" secondItem="4ve-dO-GmO" secondAttribute="trailing" constant="8" symbolic="YES" id="grP-pH-fiz"/>
+                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mZN-my-ozu"/>
+                <constraint firstItem="ZJP-mP-kNY" firstAttribute="leading" secondItem="ACe-8q-8rg" secondAttribute="leading" id="nP3-8h-fk5"/>
+                <constraint firstItem="ACe-8q-8rg" firstAttribute="top" secondItem="ZJP-mP-kNY" secondAttribute="bottom" constant="8" symbolic="YES" id="rKa-Ra-9o0"/>
+                <constraint firstItem="ZJP-mP-kNY" firstAttribute="leading" secondItem="Ama-xB-Gxs" secondAttribute="leading" id="vYK-FK-lKu"/>
+                <constraint firstAttribute="bottom" secondItem="dOV-0Y-Zcl" secondAttribute="bottom" id="z88-JY-eHw"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="collectionView" destination="dOV-0Y-Zcl" id="P4c-7G-Gpg"/>
             </connections>
+            <point key="canvasLocation" x="250" y="243"/>
         </view>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SportMojiCell" id="wW4-Yp-2xD" customClass="EmojiCell" customModule="Keyboard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <point key="canvasLocation" x="484" y="173"/>
+        </collectionViewCell>
     </objects>
     <resources>
         <image name="globe" width="88" height="87"/>

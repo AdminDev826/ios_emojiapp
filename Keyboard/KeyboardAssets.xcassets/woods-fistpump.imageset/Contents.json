@@ -3,15 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
+      "filename" : "Tiger-2.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "Tiger-1.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
       "filename" : "Tiger.png"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
     }
   ],
   "info" : {
