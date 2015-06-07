@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class KeyboardViewController: UIInputViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, KeyboardActionHandler {
     
@@ -23,18 +24,25 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         NSBundle.mainBundle().loadNibNamed("KeyboardView", owner: self, options: nil)
         
         self.keyboardView?.collectionView?.registerClass(EmojiCell.self, forCellWithReuseIdentifier: KeyboardViewController.kReuseIdentifier)
-        self.keyboardView?.collectionView?.delegate = self
-        self.keyboardView?.collectionView?.dataSource = self
+        self.keyboardView?.delegate = self
         
         self.view.addSubview(self.keyboardView!)
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        keyboardView?.collectionView?.collectionViewLayout.invalidateLayout()
     }
     
     func nextKeyboardButtonClicked() {
         super.advanceToNextInputMode()
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2;
+        return Orientation.IS_PORTRAIT ? 3 : 6
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -49,8 +57,12 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         let index = Int(arc4random_uniform(UInt32(imageNames.count)))
         image.image = UIImage(named: imageNames[index])
         cell.backgroundView = image
-        cell.tag = index
         pathDictionary[indexPath] = index
+        
+        if Build.DEBUG {
+            cell.contentView.layer.borderColor = UIColor.redColor().CGColor
+            cell.contentView.layer.borderWidth = 1.0
+        }
         
         return cell
     }
@@ -62,16 +74,10 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
             return CGSize(width: 100, height: 100)
         }
     }
-    
+
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        println("Selected index path \(indexPath)")
+        UIPasteboard.generalPasteboard().persistent = true
         UIPasteboard.generalPasteboard().image = UIImage(named: imageNames[pathDictionary[indexPath]!])
-    }
-    
-    override func textWillChange(textInput: UITextInput) {
-        // The app is about to change the document's contents. Perform any preparation here.
-    }
-    
-    override func textDidChange(textInput: UITextInput) {
-        // The app has just changed the document's contents, the document context has been updated.
     }
 }
