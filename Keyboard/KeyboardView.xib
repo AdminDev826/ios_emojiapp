@@ -55,12 +55,7 @@
                     <rect key="frame" x="40" y="0.0" width="280" height="220"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UA2-k1-RDY">
-                        <size key="itemSize" width="80" height="80"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
-                    </collectionViewFlowLayout>
+                    <collectionViewLayout key="collectionViewLayout" id="7hb-tA-I4D" customClass="SMFlowLayout" customModule="Keyboard" customModuleProvider="target"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="jpX-k7-x6q"/>
                         <outlet property="delegate" destination="-1" id="F29-Yn-IT3"/>

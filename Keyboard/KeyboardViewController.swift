@@ -37,10 +37,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         super.advanceToNextInputMode()
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0
-    }
-    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Orientation.IS_PORTRAIT ? 3 : 6
     }
@@ -68,11 +64,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        if (UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)) {
-            return CGSize(width: 80, height: 80)
-        } else {
-            return CGSize(width: 100, height: 100)
-        }
+        return Orientation.IS_PORTRAIT ? CGSize(width: 80, height: 80) : CGSize(width: 100, height: 100)
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
