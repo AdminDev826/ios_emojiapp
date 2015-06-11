@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func goToSettingsClicked(sender: UIButton) {
-        UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+        let application = UIApplication.sharedApplication()
+        application.openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
     }
 }
 
