@@ -14,5 +14,9 @@ class ViewController: UIViewController {
         let application = UIApplication.sharedApplication()
         application.openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
     }
+
+    @IBAction func rateThisAppClicked(sender: UIButton) {
+        // TODO: Go to the app store when we have an app id.
+    }
 }
 

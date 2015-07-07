@@ -31,13 +31,24 @@
                                     <action selector="goToSettingsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAf-or-4xB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1d-AA-lHY">
+                                <rect key="frame" x="254" y="66" width="92" height="30"/>
+                                <state key="normal" title="Rate this app">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rateThisAppClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I9T-pe-Txt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5CC-gx-tIp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="GJq-FH-Xte"/>
+                            <constraint firstItem="a1d-AA-lHY" firstAttribute="top" secondItem="5CC-gx-tIp" secondAttribute="bottom" constant="8" symbolic="YES" id="UIs-Gi-KIz"/>
                             <constraint firstItem="LqD-KF-bjd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yqh-LZ-4vn"/>
                             <constraint firstItem="5CC-gx-tIp" firstAttribute="centerX" secondItem="LqD-KF-bjd" secondAttribute="centerX" id="aRb-q4-Q75"/>
                             <constraint firstItem="LqD-KF-bjd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="buq-Pc-zlh"/>
+                            <constraint firstItem="a1d-AA-lHY" firstAttribute="centerX" secondItem="5CC-gx-tIp" secondAttribute="centerX" id="nIE-MT-edm"/>
                             <constraint firstItem="LqD-KF-bjd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vWY-Vo-eT3"/>
                         </constraints>
                     </view>
