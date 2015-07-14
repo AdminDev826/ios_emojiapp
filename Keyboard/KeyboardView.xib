@@ -14,53 +14,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ve-dO-GmO">
-                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="32" id="ZtJ-bw-uRk"/>
-                        <constraint firstAttribute="width" constant="32" id="geO-h4-f9n"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJP-mP-kNY">
-                    <rect key="frame" x="0.0" y="81" width="32" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="32" id="ntU-kQ-xnP"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ama-xB-Gxs">
-                    <rect key="frame" x="0.0" y="40" width="32" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="32" id="LWd-T1-78O"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACe-8q-8rg">
-                    <rect key="frame" x="0.0" y="121" width="32" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="32" id="kaY-yQ-7nD"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dOV-0Y-Zcl">
-                    <rect key="frame" x="40" y="0.0" width="280" height="220"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    <collectionViewLayout key="collectionViewLayout" id="7hb-tA-I4D" customClass="SMFlowLayout" customModule="Keyboard" customModuleProvider="target"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="jpX-k7-x6q"/>
-                        <outlet property="delegate" destination="-1" id="F29-Yn-IT3"/>
-                    </connections>
-                </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B3-9I-Oum">
                     <rect key="frame" x="0.0" y="188" width="32" height="32"/>
                     <state key="normal" image="globe">
@@ -70,23 +23,61 @@
                         <action selector="nextKeyboardButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="KIy-8e-4Qt"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwO-zO-tya">
+                    <rect key="frame" x="0.0" y="121" width="32" height="30"/>
+                    <state key="normal" title="MS">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="miscCategoryButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="wRe-Q2-zXi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4D-aQ-Hqw">
+                    <rect key="frame" x="0.0" y="38" width="32" height="30"/>
+                    <state key="normal" title="FT">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="secondCategoryButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="8Vp-Vo-EoW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-Fs-6dj">
+                    <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
+                    <state key="normal" title="BB">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="firstCategoryButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="CJr-xo-b5J"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewX-b8-uaj">
+                    <rect key="frame" x="0.0" y="76" width="32" height="30"/>
+                    <state key="normal" title="BB">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="thirdCategoryButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="OfP-l8-wME"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dOV-0Y-Zcl">
+                    <rect key="frame" x="40" y="0.0" width="280" height="220"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <collectionViewLayout key="collectionViewLayout" id="7hb-tA-I4D" customClass="SMFlowLayout" customModule="Keyboard" customModuleProvider="target"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jpX-k7-x6q"/>
+                        <outlet property="delegate" destination="-1" id="F29-Yn-IT3"/>
+                    </connections>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="leading" secondItem="Ama-xB-Gxs" secondAttribute="trailing" constant="8" symbolic="YES" id="1oX-5h-i4U"/>
-                <constraint firstItem="4ve-dO-GmO" firstAttribute="leading" secondItem="Ama-xB-Gxs" secondAttribute="leading" id="74Z-68-iMn"/>
-                <constraint firstItem="Ama-xB-Gxs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ajx-as-Gee"/>
                 <constraint firstAttribute="trailing" secondItem="dOV-0Y-Zcl" secondAttribute="trailing" id="Ar6-4k-GVc"/>
-                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="leading" secondItem="ACe-8q-8rg" secondAttribute="trailing" constant="8" symbolic="YES" id="B4Y-zW-9WZ"/>
-                <constraint firstItem="Ama-xB-Gxs" firstAttribute="top" secondItem="4ve-dO-GmO" secondAttribute="bottom" constant="8" symbolic="YES" id="Huy-pV-rgp"/>
-                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="top" secondItem="4ve-dO-GmO" secondAttribute="top" id="KMV-hf-qEv"/>
-                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="leading" secondItem="ZJP-mP-kNY" secondAttribute="trailing" constant="8" symbolic="YES" id="NRm-Zi-ezb"/>
-                <constraint firstItem="ZJP-mP-kNY" firstAttribute="top" secondItem="Ama-xB-Gxs" secondAttribute="bottom" constant="9" id="Ug5-oX-7iU"/>
-                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="leading" secondItem="4ve-dO-GmO" secondAttribute="trailing" constant="8" symbolic="YES" id="grP-pH-fiz"/>
                 <constraint firstItem="dOV-0Y-Zcl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mZN-my-ozu"/>
-                <constraint firstItem="ZJP-mP-kNY" firstAttribute="leading" secondItem="ACe-8q-8rg" secondAttribute="leading" id="nP3-8h-fk5"/>
-                <constraint firstItem="ACe-8q-8rg" firstAttribute="top" secondItem="ZJP-mP-kNY" secondAttribute="bottom" constant="8" symbolic="YES" id="rKa-Ra-9o0"/>
-                <constraint firstItem="ZJP-mP-kNY" firstAttribute="leading" secondItem="Ama-xB-Gxs" secondAttribute="leading" id="vYK-FK-lKu"/>
                 <constraint firstAttribute="bottom" secondItem="dOV-0Y-Zcl" secondAttribute="bottom" id="z88-JY-eHw"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

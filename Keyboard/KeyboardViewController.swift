@@ -33,6 +33,22 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         keyboardView?.collectionView?.collectionViewLayout.invalidateLayout()
     }
     
+    func firstCategoryButtonClicked() {
+        keyboardView?.collectionView?.reloadData()
+    }
+    
+    func secondCategoryButtonClicked() {
+        keyboardView?.collectionView?.reloadData()
+    }
+    
+    func thirdCategoryButtonClicked() {
+        keyboardView?.collectionView?.reloadData()
+    }
+    
+    func miscCategoryButtonClicked() {
+        keyboardView?.collectionView?.reloadData()
+    }
+    
     func nextKeyboardButtonClicked() {
         super.advanceToNextInputMode()
     }
