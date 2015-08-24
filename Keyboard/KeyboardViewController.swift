@@ -62,7 +62,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier(
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
             KeyboardViewController.kReuseIdentifier, forIndexPath: indexPath) as! EmojiCell
         
         let image = UIImageView(frame: cell.frame)
@@ -84,7 +84,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        println("Selected index path \(indexPath)")
         UIPasteboard.generalPasteboard().persistent = true
         UIPasteboard.generalPasteboard().image = UIImage(named: imageNames[pathDictionary[indexPath]!])
     }
