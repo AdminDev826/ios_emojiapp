@@ -19,7 +19,6 @@ protocol KeyboardActionHandler {
 @objc public class KeyboardView: UIView {
     
     var delegate: KeyboardActionHandler?
-    @IBOutlet var collectionView: UICollectionView?
     
     @IBAction func nextKeyboardButtonClicked(sender: UIButton) {
         delegate?.nextKeyboardButtonClicked()

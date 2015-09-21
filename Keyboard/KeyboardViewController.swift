@@ -11,9 +11,10 @@ import QuartzCore
 
 class KeyboardViewController: UIInputViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, KeyboardActionHandler {
     
-    @IBOutlet var keyboardView: KeyboardView?
+    @IBOutlet var keyboardView: KeyboardView!
+    var collectionView: UICollectionView!
     
-    static let kReuseIdentifier: String = "SPORT_MOJI_CELL"
+    static let kReuseIdentifier: String = "SportMojiCell"
     
     let imageNames: [String] = ["woods-fistpump", "joe-horn", "reggie-choke"]
     var pathDictionary = [NSIndexPath: Int]()
@@ -22,31 +23,35 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         super.viewDidLoad()
         
         NSBundle.mainBundle().loadNibNamed("KeyboardView", owner: self, options: nil)
-        
-        self.keyboardView?.collectionView?.registerClass(EmojiCell.self, forCellWithReuseIdentifier: KeyboardViewController.kReuseIdentifier)
         self.keyboardView?.delegate = self
         
-        self.view.addSubview(self.keyboardView!)
+        collectionView = UICollectionView(frame: CGRect(origin: CGPoint(x: 35, y: 0), size: CGSize(width: self.view.frame.width - 35, height: self.view.frame.height)))
+        
+        collectionView.delegate = self
+        collectionView.registerClass(EmojiCell.self, forCellWithReuseIdentifier: KeyboardViewController.kReuseIdentifier)
+        collectionView.dataSource = self
+        self.view.addSubview(collectionView)
+        self.view.addSubview(keyboardView)
     }
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-        keyboardView?.collectionView?.collectionViewLayout.invalidateLayout()
+        collectionView.collectionViewLayout.invalidateLayout()
     }
     
     func firstCategoryButtonClicked() {
-        keyboardView?.collectionView?.reloadData()
+        collectionView.reloadData()
     }
     
     func secondCategoryButtonClicked() {
-        keyboardView?.collectionView?.reloadData()
+        collectionView.reloadData()
     }
     
     func thirdCategoryButtonClicked() {
-        keyboardView?.collectionView?.reloadData()
+        collectionView.reloadData()
     }
     
     func miscCategoryButtonClicked() {
-        keyboardView?.collectionView?.reloadData()
+        collectionView.reloadData()
     }
     
     func nextKeyboardButtonClicked() {
@@ -63,7 +68,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
-            KeyboardViewController.kReuseIdentifier, forIndexPath: indexPath) as! EmojiCell
+            KeyboardViewController.kReuseIdentifier, forIndexPath: indexPath)
         
         let image = UIImageView(frame: cell.frame)
         let index = Int(arc4random_uniform(UInt32(imageNames.count)))

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14F19a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F19a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="Keyboard" customModuleProvider="target">
@@ -25,7 +25,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwO-zO-tya">
-                    <rect key="frame" x="0.0" y="141" width="32" height="30"/>
+                    <rect key="frame" x="0.0" y="141" width="32" height="32"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" title="🏆">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,7 +36,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4D-aQ-Hqw">
-                    <rect key="frame" x="0.0" y="51" width="32" height="30"/>
+                    <rect key="frame" x="0.0" y="51" width="32" height="32"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" title="🏈">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,7 +47,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewX-b8-uaj">
-                    <rect key="frame" x="0.0" y="95" width="32" height="30"/>
+                    <rect key="frame" x="0.0" y="95" width="32" height="32"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" title="⚾️">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,18 +57,8 @@
                         <action selector="thirdCategoryButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="OfP-l8-wME"/>
                     </connections>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dOV-0Y-Zcl">
-                    <rect key="frame" x="40" y="0.0" width="280" height="220"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    <collectionViewLayout key="collectionViewLayout" id="7hb-tA-I4D" customClass="SMFlowLayout" customModule="Keyboard" customModuleProvider="target"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="jpX-k7-x6q"/>
-                        <outlet property="delegate" destination="-1" id="F29-Yn-IT3"/>
-                    </connections>
-                </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-Fs-6dj">
-                    <rect key="frame" x="0.0" y="8" width="32" height="30"/>
+                    <rect key="frame" x="0.0" y="8" width="32" height="32"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" title="🏀">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,28 +70,10 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="dOV-0Y-Zcl" secondAttribute="trailing" id="Ar6-4k-GVc"/>
-                <constraint firstItem="dOV-0Y-Zcl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mZN-my-ozu"/>
-                <constraint firstAttribute="bottom" secondItem="dOV-0Y-Zcl" secondAttribute="bottom" id="z88-JY-eHw"/>
-            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="collectionView" destination="dOV-0Y-Zcl" id="P4c-7G-Gpg"/>
-            </connections>
             <point key="canvasLocation" x="250" y="243"/>
         </view>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SportMojiCell" id="wW4-Yp-2xD" customClass="EmojiCell" customModule="Keyboard" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-            </view>
-            <point key="canvasLocation" x="484" y="173"/>
-        </collectionViewCell>
     </objects>
     <resources>
         <image name="globe" width="88" height="87"/>
