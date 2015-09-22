@@ -16,22 +16,28 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     
     static let kReuseIdentifier: String = "SportMojiCell"
     
-    let imageNames: [String] = ["woods-fistpump", "joe-horn", "reggie-choke"]
     var pathDictionary = [NSIndexPath: Int]()
+    var currentImages = EmojiDefs.basketballImages;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NSBundle.mainBundle().loadNibNamed("KeyboardView", owner: self, options: nil)
         self.keyboardView?.delegate = self
-        
-        collectionView = UICollectionView(frame: CGRect(origin: CGPoint(x: 35, y: 0), size: CGSize(width: self.view.frame.width - 35, height: self.view.frame.height)))
+        self.view.addSubview(keyboardView)
+    }
+
+    override func viewDidLayoutSubviews() {
+        let rect = CGRect(origin: CGPoint(x: 35, y: 0), size: CGSize(width: self.view.frame.width - 35, height: self.view.frame.height))
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.itemSize = CGSize(width: 80, height: 80)
+        collectionView = UICollectionView(frame: rect, collectionViewLayout: flowLayout)
+        collectionView.backgroundColor = UIColor.whiteColor()
         
         collectionView.delegate = self
         collectionView.registerClass(EmojiCell.self, forCellWithReuseIdentifier: KeyboardViewController.kReuseIdentifier)
         collectionView.dataSource = self
         self.view.addSubview(collectionView)
-        self.view.addSubview(keyboardView)
     }
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
@@ -39,18 +45,22 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     }
     
     func firstCategoryButtonClicked() {
+        currentImages = EmojiDefs.imageForCategory(EmojiDefs.Categories.Basketball)
         collectionView.reloadData()
     }
     
     func secondCategoryButtonClicked() {
+        currentImages = EmojiDefs.imageForCategory(EmojiDefs.Categories.Football)
         collectionView.reloadData()
     }
     
     func thirdCategoryButtonClicked() {
+        currentImages = EmojiDefs.imageForCategory(EmojiDefs.Categories.Baseball)
         collectionView.reloadData()
     }
     
     func miscCategoryButtonClicked() {
+        currentImages = EmojiDefs.imageForCategory(EmojiDefs.Categories.Misc)
         collectionView.reloadData()
     }
     
@@ -59,11 +69,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Orientation.IS_PORTRAIT ? 3 : 6
-    }
-    
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 15;
+        return currentImages.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -71,11 +77,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
             KeyboardViewController.kReuseIdentifier, forIndexPath: indexPath)
         
         let image = UIImageView(frame: cell.frame)
-        let index = Int(arc4random_uniform(UInt32(imageNames.count)))
-        image.image = UIImage(named: imageNames[index])
+        image.image = UIImage(named: currentImages[indexPath.row + indexPath.section])
         cell.backgroundView = image
-        pathDictionary[indexPath] = index
-        
         if Build.DEBUG {
             cell.contentView.layer.borderColor = UIColor.redColor().CGColor
             cell.contentView.layer.borderWidth = 1.0
@@ -83,13 +86,10 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         
         return cell
     }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return Orientation.IS_PORTRAIT ? CGSize(width: 80, height: 80) : CGSize(width: 100, height: 100)
-    }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         UIPasteboard.generalPasteboard().persistent = true
-        UIPasteboard.generalPasteboard().image = UIImage(named: imageNames[pathDictionary[indexPath]!])
+        let imageName = currentImages[indexPath.row + indexPath.section]
+        UIPasteboard.generalPasteboard().image = UIImage(named: imageName)
     }
 }

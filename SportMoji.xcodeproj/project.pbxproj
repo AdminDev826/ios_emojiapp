@@ -17,6 +17,7 @@
 		2A2236BD1B1F1709006B13C1 /* KeyboardAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2236BC1B1F1709006B13C1 /* KeyboardAssets.xcassets */; };
 		2A2236C51B1F44EB006B13C1 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2236C41B1F44EB006B13C1 /* KeyboardView.xib */; };
 		2A40ED811B242DAC0000C2C2 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40ED801B242DAC0000C2C2 /* DeviceHelper.swift */; };
+		2A84C59E1BB14BC10026E913 /* EmojiDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A84C59D1BB14BC10026E913 /* EmojiDefs.swift */; settings = {ASSET_TAGS = (); }; };
 		2AB250231B20E4FC005F6A4B /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB250221B20E4FC005F6A4B /* EmojiCell.swift */; };
 		2AB250271B20E8F9005F6A4B /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB250261B20E8F9005F6A4B /* KeyboardView.swift */; };
 		2AB2502D1B20F657005F6A4B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2502C1B20F657005F6A4B /* KeyboardViewController.swift */; };
@@ -69,6 +70,7 @@
 		2A2236BC1B1F1709006B13C1 /* KeyboardAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = KeyboardAssets.xcassets; sourceTree = "<group>"; };
 		2A2236C41B1F44EB006B13C1 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		2A40ED801B242DAC0000C2C2 /* DeviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		2A84C59D1BB14BC10026E913 /* EmojiDefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiDefs.swift; sourceTree = "<group>"; };
 		2AB250221B20E4FC005F6A4B /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		2AB250261B20E8F9005F6A4B /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		2AB250281B20EDE2005F6A4B /* Keyboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keyboard-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				2AB250281B20EDE2005F6A4B /* Keyboard-Bridging-Header.h */,
 				2AB2502C1B20F657005F6A4B /* KeyboardViewController.swift */,
 				2A40ED801B242DAC0000C2C2 /* DeviceHelper.swift */,
+				2A84C59D1BB14BC10026E913 /* EmojiDefs.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			files = (
 				2AB250271B20E8F9005F6A4B /* KeyboardView.swift in Sources */,
 				2A40ED811B242DAC0000C2C2 /* DeviceHelper.swift in Sources */,
+				2A84C59E1BB14BC10026E913 /* EmojiDefs.swift in Sources */,
 				2AB2502D1B20F657005F6A4B /* KeyboardViewController.swift in Sources */,
 				2AB250231B20E4FC005F6A4B /* EmojiCell.swift in Sources */,
 			);
