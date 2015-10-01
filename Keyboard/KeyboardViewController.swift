@@ -54,9 +54,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         collectionView.reloadData()
     }
     
-    func thirdCategoryButtonClicked() {
-        currentImages = EmojiDefs.imageForCategory(EmojiDefs.Categories.Baseball)
-        collectionView.reloadData()
+    func deleteButtonClicked() {
+        self.textDocumentProxy.deleteBackward();
     }
     
     func miscCategoryButtonClicked() {

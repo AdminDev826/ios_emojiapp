@@ -9,10 +9,10 @@
 import UIKit
 
 protocol KeyboardActionHandler {
+    func deleteButtonClicked()
     func nextKeyboardButtonClicked()
     func firstCategoryButtonClicked()
     func secondCategoryButtonClicked()
-    func thirdCategoryButtonClicked()
     func miscCategoryButtonClicked()
 }
 
@@ -32,8 +32,8 @@ protocol KeyboardActionHandler {
         delegate?.secondCategoryButtonClicked()
     }
     
-    @IBAction func thirdCategoryButtonClicked(sender: UIButton) {
-        delegate?.thirdCategoryButtonClicked()
+    @IBAction func deleteButtonClicked(sender: UIButton) {
+        delegate?.deleteButtonClicked()
     }
     
     @IBAction func miscCategoryButtonClicked(sender: UIButton) {

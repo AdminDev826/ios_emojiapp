@@ -17,9 +17,9 @@ struct EmojiDefs {
             return basketballImages;
         case .Football:
             return footballImages;
-        case .Baseball:
-            return baseballImages;
         case .Misc:
+            return miscImages;
+        default:
             return miscImages;
         }
     }
@@ -49,12 +49,6 @@ struct EmojiDefs {
         "tony_gonzalez"
     ]
 
-    static let baseballImages: [String] = [
-        "derek_jeter",
-        "kirk_gibson",
-        "mike_trout"
-    ]
-
     static let miscImages: [String] = [
         "ali",
         "bolt",
@@ -63,6 +57,9 @@ struct EmojiDefs {
         "john_mcenroe",
         "lance_armstrong",
         "wilt",
-        "woods"
+        "woods",
+        "derek_jeter",
+        "kirk_gibson",
+        "mike_trout"
     ]
 }
