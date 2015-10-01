@@ -17,7 +17,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     static let kReuseIdentifier: String = "SportMojiCell"
     
     var pathDictionary = [NSIndexPath: Int]()
-    var currentImages = EmojiDefs.basketballImages;
+    var currentImages = EmojiDefs.basketballImages
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     }
     
     func deleteButtonClicked() {
-        self.textDocumentProxy.deleteBackward();
+        self.textDocumentProxy.deleteBackward()
     }
     
     func miscCategoryButtonClicked() {

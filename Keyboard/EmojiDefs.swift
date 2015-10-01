@@ -14,13 +14,13 @@ struct EmojiDefs {
     static func imageForCategory(category: Categories) -> [String] {
         switch(category) {
         case .Basketball:
-            return basketballImages;
+            return basketballImages
         case .Football:
-            return footballImages;
+            return footballImages
         case .Misc:
-            return miscImages;
+            return miscImages
         default:
-            return miscImages;
+            return miscImages
         }
     }
 
