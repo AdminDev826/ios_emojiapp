@@ -18,5 +18,7 @@ class ViewController: UIViewController {
     @IBAction func rateThisAppClicked(sender: UIButton) {
         // TODO: Go to the app store when we have an app id.
     }
+    
+    @IBOutlet var labelView: UITextField!
 }
 

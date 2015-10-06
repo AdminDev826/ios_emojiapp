@@ -21,13 +21,14 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         NSBundle.mainBundle().loadNibNamed("KeyboardView", owner: self, options: nil)
-        self.keyboardView?.delegate = self
         self.view.addSubview(keyboardView)
+        self.keyboardView.delegate = self
     }
 
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
         let rect = CGRect(origin: CGPoint(x: 35, y: 0), size: CGSize(width: self.view.frame.width - 35, height: self.view.frame.height))
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: 80, height: 80)
@@ -38,10 +39,11 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         collectionView.registerClass(EmojiCell.self, forCellWithReuseIdentifier: KeyboardViewController.kReuseIdentifier)
         collectionView.dataSource = self
         self.view.addSubview(collectionView)
+        self.keyboardView.categoryScrollView.scrollEnabled = isLandscape()
     }
     
-    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-        collectionView.collectionViewLayout.invalidateLayout()
+    func isLandscape() -> Bool {
+        return UIScreen.mainScreen().bounds.size.width > UIScreen.mainScreen().bounds.size.height
     }
     
     func firstCategoryButtonClicked() {
@@ -55,6 +57,9 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     }
     
     func deleteButtonClicked() {
+        // Delete backward twice becuase there is a newline
+        // after the image is pasted into the label.
+        self.textDocumentProxy.deleteBackward()
         self.textDocumentProxy.deleteBackward()
     }
     
@@ -78,12 +83,18 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         let image = UIImageView(frame: cell.frame)
         image.image = UIImage(named: currentImages[indexPath.row + indexPath.section])
         cell.backgroundView = image
-        if Build.DEBUG {
-            cell.contentView.layer.borderColor = UIColor.redColor().CGColor
-            cell.contentView.layer.borderWidth = 1.0
-        }
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as UICollectionViewCell!
+        cell.backgroundColor = UIColor.grayColor()
+    }
+    
+    func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as UICollectionViewCell!
+        cell.backgroundColor = UIColor.whiteColor()
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
