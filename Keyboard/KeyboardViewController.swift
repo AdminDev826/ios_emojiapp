@@ -39,7 +39,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         collectionView.registerClass(EmojiCell.self, forCellWithReuseIdentifier: KeyboardViewController.kReuseIdentifier)
         collectionView.dataSource = self
         self.view.addSubview(collectionView)
-        self.keyboardView.categoryScrollView.scrollEnabled = isLandscape()
+        self.keyboardView.deleteButton.hidden = isLandscape()
+        self.keyboardView.nextKeyboardButton.hidden = isLandscape()
     }
     
     func isLandscape() -> Bool {

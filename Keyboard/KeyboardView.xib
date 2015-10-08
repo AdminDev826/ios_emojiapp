@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EB-Ue-upy">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xk-wD-NgB">
                     <rect key="frame" x="0.0" y="0.0" width="32" height="220"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B3-9I-Oum">
@@ -28,20 +28,8 @@
                                 <action selector="nextKeyboardButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="KIy-8e-4Qt"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwO-zO-tya">
-                            <rect key="frame" x="0.0" y="108" width="32" height="32"/>
-                            <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <state key="normal" title="🏆">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="miscCategoryButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="wRe-Q2-zXi"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVO-XO-Rls">
-                            <rect key="frame" x="0.0" y="148" width="32" height="32"/>
+                            <rect key="frame" x="0.0" y="141" width="32" height="32"/>
                             <animations/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                             <state key="normal" title="X">
@@ -51,20 +39,8 @@
                                 <action selector="deleteButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="KFQ-zj-zlP"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-Fs-6dj">
-                            <rect key="frame" x="0.0" y="8" width="32" height="32"/>
-                            <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <state key="normal" title="🏀">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="firstCategoryButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="CJr-xo-b5J"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4D-aQ-Hqw">
-                            <rect key="frame" x="0.0" y="54" width="32" height="32"/>
+                            <rect key="frame" x="0.0" y="51" width="32" height="32"/>
                             <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <state key="normal" title="🏈">
@@ -75,16 +51,42 @@
                                 <action selector="secondCategoryButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="8Vp-Vo-EoW"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-Fs-6dj">
+                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <state key="normal" title="🏀">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="firstCategoryButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="CJr-xo-b5J"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwO-zO-tya">
+                            <rect key="frame" x="0.0" y="101" width="32" height="32"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <state key="normal" title="🏆">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="miscCategoryButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="wRe-Q2-zXi"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <animations/>
-                </scrollView>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="categoryScrollView" destination="3EB-Ue-upy" id="54b-qZ-tBO"/>
+                <outlet property="deleteButton" destination="eVO-XO-Rls" id="qdU-kQ-p6u"/>
+                <outlet property="nextKeyboardButton" destination="6B3-9I-Oum" id="ltR-Hz-6Jo"/>
             </connections>
             <point key="canvasLocation" x="250" y="243"/>
         </view>

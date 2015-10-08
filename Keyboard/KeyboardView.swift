@@ -20,7 +20,8 @@ protocol KeyboardActionHandler {
     
     var delegate: KeyboardActionHandler?
     
-    @IBOutlet var categoryScrollView: UIScrollView!
+    @IBOutlet var deleteButton: UIButton!
+    @IBOutlet var nextKeyboardButton: UIButton!
     
     @IBAction func nextKeyboardButtonClicked(sender: UIButton) {
         delegate?.nextKeyboardButtonClicked()
