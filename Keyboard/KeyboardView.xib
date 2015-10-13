@@ -18,18 +18,8 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xk-wD-NgB">
                     <rect key="frame" x="0.0" y="0.0" width="32" height="220"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B3-9I-Oum">
-                            <rect key="frame" x="0.0" y="120" width="32" height="32"/>
-                            <animations/>
-                            <state key="normal" image="globe">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="nextKeyboardButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="KIy-8e-4Qt"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4D-aQ-Hqw">
-                            <rect key="frame" x="0.0" y="40" width="32" height="32"/>
+                            <rect key="frame" x="0.0" y="55" width="32" height="32"/>
                             <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <state key="normal" title="🏈">
@@ -41,7 +31,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-Fs-6dj">
-                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                            <rect key="frame" x="0.0" y="15" width="32" height="32"/>
                             <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <state key="normal" title="🏀">
@@ -53,7 +43,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwO-zO-tya">
-                            <rect key="frame" x="0.0" y="80" width="32" height="32"/>
+                            <rect key="frame" x="0.0" y="95" width="32" height="32"/>
                             <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <state key="normal" title="🏆">
@@ -65,7 +55,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVO-XO-Rls">
-                            <rect key="frame" x="0.0" y="160" width="32" height="32"/>
+                            <rect key="frame" x="0.0" y="175" width="32" height="32"/>
                             <animations/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                             <state key="normal" title="X">
@@ -73,6 +63,16 @@
                             </state>
                             <connections>
                                 <action selector="deleteButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="KFQ-zj-zlP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B3-9I-Oum">
+                            <rect key="frame" x="0.0" y="135" width="32" height="32"/>
+                            <animations/>
+                            <state key="normal" image="globe">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nextKeyboardButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="KIy-8e-4Qt"/>
                             </connections>
                         </button>
                     </subviews>
