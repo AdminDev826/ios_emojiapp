@@ -40,7 +40,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         collectionView.dataSource = self
         self.view.addSubview(collectionView)
         self.keyboardView.deleteButton.hidden = isLandscape()
-        self.keyboardView.nextKeyboardButton.hidden = isLandscape()
     }
     
     func isLandscape() -> Bool {
