@@ -46,6 +46,11 @@
                                     <action selector="rateThisAppClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I9T-pe-Txt"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2x9-pZ-Vyr">
+                                <rect key="frame" x="166" y="250" width="200" height="315"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -53,6 +58,7 @@
                             <constraint firstItem="5CC-gx-tIp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="GJq-FH-Xte"/>
                             <constraint firstItem="a1d-AA-lHY" firstAttribute="top" secondItem="5CC-gx-tIp" secondAttribute="bottom" constant="8" symbolic="YES" id="UIs-Gi-KIz"/>
                             <constraint firstItem="LqD-KF-bjd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yqh-LZ-4vn"/>
+                            <constraint firstItem="2x9-pZ-Vyr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aND-Dm-R4M"/>
                             <constraint firstItem="5CC-gx-tIp" firstAttribute="centerX" secondItem="LqD-KF-bjd" secondAttribute="centerX" id="aRb-q4-Q75"/>
                             <constraint firstItem="LqD-KF-bjd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="buq-Pc-zlh"/>
                             <constraint firstItem="a1d-AA-lHY" firstAttribute="centerX" secondItem="5CC-gx-tIp" secondAttribute="centerX" id="nIE-MT-edm"/>
@@ -61,11 +67,12 @@
                     </view>
                     <connections>
                         <outlet property="labelView" destination="LqD-KF-bjd" id="ERd-36-xwi"/>
+                        <outlet property="videoContainer" destination="2x9-pZ-Vyr" id="dlk-36-n1E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="281"/>
+            <point key="canvasLocation" x="522" y="193"/>
         </scene>
     </scenes>
 </document>
