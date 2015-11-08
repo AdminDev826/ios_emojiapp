@@ -100,6 +100,21 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         UIPasteboard.generalPasteboard().persistent = true
         let imageName = currentImages[indexPath.row + indexPath.section]
-        UIPasteboard.generalPasteboard().image = UIImage(named: imageName)
+        let image = UIImage(named: imageName)!
+
+        UIPasteboard.generalPasteboard().image = scaleImageDown(image)
+    }
+    
+    func scaleImageDown(image: UIImage) -> UIImage {
+        let size = CGSizeApplyAffineTransform(image.size, CGAffineTransformMakeScale(0.85, 0.85))
+        let hasAlpha = true
+        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+        image.drawInRect(CGRect(origin: CGPointZero, size: size))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return scaledImage
     }
 }

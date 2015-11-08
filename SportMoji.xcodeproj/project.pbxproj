@@ -17,9 +17,9 @@
 		2A2236BD1B1F1709006B13C1 /* KeyboardAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2236BC1B1F1709006B13C1 /* KeyboardAssets.xcassets */; };
 		2A2236C51B1F44EB006B13C1 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2236C41B1F44EB006B13C1 /* KeyboardView.xib */; };
 		2A40ED811B242DAC0000C2C2 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40ED801B242DAC0000C2C2 /* DeviceHelper.swift */; };
-		2A44A0301BE2DB5A00B2DF8E /* doji_video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2A44A02F1BE2DB5A00B2DF8E /* doji_video.mov */; settings = {ASSET_TAGS = (); }; };
+		2A44A0301BE2DB5A00B2DF8E /* doji_video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2A44A02F1BE2DB5A00B2DF8E /* doji_video.mov */; };
 		2A44A0321BE2DC4F00B2DF8E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A44A0311BE2DC4F00B2DF8E /* MediaPlayer.framework */; };
-		2A84C59E1BB14BC10026E913 /* EmojiDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A84C59D1BB14BC10026E913 /* EmojiDefs.swift */; settings = {ASSET_TAGS = (); }; };
+		2A84C59E1BB14BC10026E913 /* EmojiDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A84C59D1BB14BC10026E913 /* EmojiDefs.swift */; };
 		2AB250231B20E4FC005F6A4B /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB250221B20E4FC005F6A4B /* EmojiCell.swift */; };
 		2AB250271B20E8F9005F6A4B /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB250261B20E8F9005F6A4B /* KeyboardView.swift */; };
 		2AB2502D1B20F657005F6A4B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2502C1B20F657005F6A4B /* KeyboardViewController.swift */; };
