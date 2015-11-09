@@ -82,7 +82,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         
         let image = UIImageView(frame: cell.frame)
         let uiimage = UIImage(named: currentImages[indexPath.row + indexPath.section])
-        image.image = scaleImageDown(uiimage!, scale: 0.5)
+        image.image = scaleImageDown(uiimage!, scale: 0.3)
         cell.backgroundView = image
         
         return cell
