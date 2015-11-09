@@ -81,7 +81,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
             KeyboardViewController.kReuseIdentifier, forIndexPath: indexPath)
         
         let image = UIImageView(frame: cell.frame)
-        image.image = UIImage(named: currentImages[indexPath.row + indexPath.section])
+        let uiimage = UIImage(named: currentImages[indexPath.row + indexPath.section])
+        image.image = scaleImageDown(uiimage!, scale: 0.5)
         cell.backgroundView = image
         
         return cell
@@ -102,11 +103,11 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         let imageName = currentImages[indexPath.row + indexPath.section]
         let image = UIImage(named: imageName)!
 
-        UIPasteboard.generalPasteboard().image = scaleImageDown(image)
+        UIPasteboard.generalPasteboard().image = scaleImageDown(image, scale: 0.85)
     }
     
-    func scaleImageDown(image: UIImage) -> UIImage {
-        let size = CGSizeApplyAffineTransform(image.size, CGAffineTransformMakeScale(0.85, 0.85))
+    func scaleImageDown(image: UIImage, scale: CGFloat) -> UIImage {
+        let size = CGSizeApplyAffineTransform(image.size, CGAffineTransformMakeScale(scale, scale))
         let hasAlpha = true
         let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
         
