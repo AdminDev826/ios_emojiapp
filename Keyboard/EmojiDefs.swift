@@ -25,39 +25,39 @@ struct EmojiDefs {
     }
 
     static let basketballImages: [String] = [
-        "iverson",
+        "iverson_lue",
         "james_harden",
-        "jordan_trophy",
-        "lance_stephenson",
-        "lebron_james",
-        "michael_jordan",
-        "mutumbo",
+        "mj_trophy",
+        "lance_steph",
+        "lebron",
+        "jordan_jump",
+        "mutombo",
         "reggie_miller",
         "spurs_trio",
-        "wilt"
+        "wilt_chamberlain"
     ]
 
     static let footballImages: [String] = [
         "cam_newton",
         "joe_horn",
-        "johnny_manziel",
-        "namath",
+        "money_manziel",
+        "joe_namath",
         "kevin_dyson",
-        "owens",
+        "terrell_owens",
         "randy_moss",
         "ray_lewis",
-        "tim_tebow",
+        "tebow",
         "tony_gonzalez"
     ]
 
     static let miscImages: [String] = [
-        "ali",
-        "bolt",
+        "muhammad_ali",
+        "usain_bolt",
         "bruce_jenner",
-        "diego_maradona",
-        "john_mcenroe",
+        "maradona",
+        "mc_enroe",
         "lance_armstrong",
-        "woods",
+        "tiger_woods",
         "derek_jeter",
         "kirk_gibson",
         "mike_trout"

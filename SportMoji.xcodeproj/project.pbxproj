@@ -268,6 +268,7 @@
 					};
 					2A2236AC1B1F0E98006B13C1 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = G933384TAB;
 					};
 				};
 			};
@@ -538,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -558,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = Keyboard/Info.plist;

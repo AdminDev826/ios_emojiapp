@@ -81,10 +81,10 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
             KeyboardViewController.kReuseIdentifier, forIndexPath: indexPath)
         
         let image = UIImageView(frame: cell.frame)
-        let uiimage = UIImage(named: currentImages[indexPath.row + indexPath.section])
-        image.image = scaleImageDown(uiimage!, scale: 0.3)
+        let name = self.currentImages[indexPath.row + indexPath.section]
+        let uiimage = UIImage(named: "\(name)_thumb")
+        image.image = self.scaleImageDown(uiimage!, scale: 0.3)
         cell.backgroundView = image
-        
         return cell
     }
     
