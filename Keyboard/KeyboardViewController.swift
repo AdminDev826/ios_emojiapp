@@ -83,7 +83,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         let image = UIImageView(frame: cell.frame)
         let name = self.currentImages[indexPath.row + indexPath.section]
         let uiimage = UIImage(named: "\(name)_thumb")
-        image.image = self.scaleImageDown(uiimage!, scale: 0.3)
+        image.image = uiimage
         cell.backgroundView = image
         return cell
     }
