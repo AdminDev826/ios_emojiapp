@@ -12,6 +12,7 @@ import QuartzCore
 class KeyboardViewController: UIInputViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, KeyboardActionHandler {
     
     @IBOutlet var keyboardView: KeyboardView!
+    @IBOutlet var grantAccessView: UIView!
     var collectionView: UICollectionView!
     
     static let kReuseIdentifier: String = "SportMojiCell"
@@ -21,13 +22,27 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSBundle.mainBundle().loadNibNamed("KeyboardView", owner: self, options: nil)
-        self.view.addSubview(keyboardView)
-        self.keyboardView.delegate = self
+        
+        if KeyboardViewController.hasFullAccess() {
+            NSBundle.mainBundle().loadNibNamed("KeyboardView", owner: self, options: nil)
+            self.view.addSubview(keyboardView)
+            self.keyboardView.delegate = self
+        } else {
+            NSBundle.mainBundle().loadNibNamed("GrantAccessView", owner: self, options: nil)
+            self.view.addSubview(grantAccessView)
+        }
+    }
+    
+    @IBAction func grantNextKeyboardButtonClicked(sender: UIButton) {
+        nextKeyboardButtonClicked()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        if keyboardView == nil {
+            return
+        }
         
         let rect = CGRect(origin: CGPoint(x: 35, y: 0), size: CGSize(width: self.view.frame.width - 35, height: self.view.frame.height))
         let flowLayout = UICollectionViewFlowLayout()
@@ -117,5 +132,9 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return scaledImage
+    }
+    
+    static func hasFullAccess() -> Bool {
+        return UIPasteboard.generalPasteboard().isKindOfClass(UIPasteboard)
     }
 }
