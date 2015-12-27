@@ -33,6 +33,12 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         }
     }
     
+    @IBAction func grantShareDojiButtonClicked(sender: UIButton) {
+        let appId = "com.hwrdprkns.SportMoji"
+        let url = "itms-apps://itunes.apple.com/app/id\(appId)"
+        self.textDocumentProxy.insertText("Take a look at Doji! \(url)")
+    }
+
     @IBAction func grantNextKeyboardButtonClicked(sender: UIButton) {
         nextKeyboardButtonClicked()
     }

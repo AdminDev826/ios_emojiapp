@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="Keyboard" customModuleProvider="target">
@@ -15,24 +16,63 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enable full access for Doji!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVF-Mb-TqP">
-                    <rect key="frame" x="32" y="99" width="256" height="21"/>
-                    <animations/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enable full access for Doji!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVF-Mb-TqP">
+                    <rect key="frame" x="32" y="8" width="256" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ECN-gr-AcF"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlB-TO-D3Y">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converse with friends with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVl-Hy-v3v">
+                    <rect key="frame" x="59" y="56" width="203" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Dtt-Q8-NTj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlB-TO-D3Y">
                     <rect key="frame" x="110" y="182" width="101" height="30"/>
-                    <animations/>
                     <state key="normal" title="Next Keyboard"/>
                     <connections>
                         <action selector="grantNextKeyboardButtonClicked:" destination="-1" eventType="touchUpInside" id="sS6-cw-W3J"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXF-UM-mKi">
+                    <rect key="frame" x="123" y="144" width="74" height="30"/>
+                    <state key="normal" title="Share Doji "/>
+                    <connections>
+                        <action selector="grantShareDojiButtonClicked:" destination="-1" eventType="touchUpInside" id="ssB-OX-fV3"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iconic sports moments!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvm-A1-wFB">
+                    <rect key="frame" x="70" y="85" width="180" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="LPU-IT-QgF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DVF-Mb-TqP" firstAttribute="top" secondItem="syS-hY-Dx5" secondAttribute="topMargin" id="5KC-x7-Jh6"/>
+                <constraint firstItem="lXF-UM-mKi" firstAttribute="centerX" secondItem="Zvm-A1-wFB" secondAttribute="centerX" id="5nq-yX-QXO"/>
+                <constraint firstItem="DVF-Mb-TqP" firstAttribute="leading" secondItem="syS-hY-Dx5" secondAttribute="leading" constant="32" id="EyP-GV-HCo"/>
+                <constraint firstItem="Zvm-A1-wFB" firstAttribute="top" secondItem="SVl-Hy-v3v" secondAttribute="bottom" constant="8" symbolic="YES" id="HeO-gK-epn"/>
+                <constraint firstItem="FlB-TO-D3Y" firstAttribute="top" secondItem="lXF-UM-mKi" secondAttribute="bottom" constant="8" symbolic="YES" id="M5e-Ib-K1N"/>
+                <constraint firstItem="Zvm-A1-wFB" firstAttribute="leading" secondItem="syS-hY-Dx5" secondAttribute="leading" constant="70" id="RGt-fY-eG2"/>
+                <constraint firstItem="FlB-TO-D3Y" firstAttribute="centerX" secondItem="lXF-UM-mKi" secondAttribute="centerX" id="Uuz-Aw-g6f"/>
+                <constraint firstItem="SVl-Hy-v3v" firstAttribute="top" secondItem="DVF-Mb-TqP" secondAttribute="bottom" constant="27" id="Xbn-LC-L8F"/>
+                <constraint firstItem="SVl-Hy-v3v" firstAttribute="centerX" secondItem="DVF-Mb-TqP" secondAttribute="centerX" id="au2-Im-Znh"/>
+                <constraint firstItem="Zvm-A1-wFB" firstAttribute="centerX" secondItem="syS-hY-Dx5" secondAttribute="centerX" id="day-gG-Sd1"/>
+                <constraint firstItem="FlB-TO-D3Y" firstAttribute="bottom" secondItem="syS-hY-Dx5" secondAttribute="bottomMargin" id="dy1-PR-zjH"/>
+                <constraint firstItem="Zvm-A1-wFB" firstAttribute="centerX" secondItem="SVl-Hy-v3v" secondAttribute="centerX" id="uZJ-w7-Jer"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="294" y="-54"/>
