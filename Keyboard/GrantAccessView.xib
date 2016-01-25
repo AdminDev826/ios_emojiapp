@@ -34,15 +34,8 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlB-TO-D3Y">
-                    <rect key="frame" x="110" y="182" width="101" height="30"/>
-                    <state key="normal" title="Next Keyboard"/>
-                    <connections>
-                        <action selector="grantNextKeyboardButtonClicked:" destination="-1" eventType="touchUpInside" id="sS6-cw-W3J"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXF-UM-mKi">
-                    <rect key="frame" x="123" y="144" width="74" height="30"/>
+                    <rect key="frame" x="32" y="114" width="74" height="30"/>
                     <state key="normal" title="Share Doji "/>
                     <connections>
                         <action selector="grantShareDojiButtonClicked:" destination="-1" eventType="touchUpInside" id="ssB-OX-fV3"/>
@@ -57,20 +50,27 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlB-TO-D3Y">
+                    <rect key="frame" x="187" y="114" width="101" height="30"/>
+                    <state key="normal" title="Next Keyboard"/>
+                    <connections>
+                        <action selector="grantNextKeyboardButtonClicked:" destination="-1" eventType="touchUpInside" id="sS6-cw-W3J"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="DVF-Mb-TqP" firstAttribute="top" secondItem="syS-hY-Dx5" secondAttribute="topMargin" id="5KC-x7-Jh6"/>
-                <constraint firstItem="lXF-UM-mKi" firstAttribute="centerX" secondItem="Zvm-A1-wFB" secondAttribute="centerX" id="5nq-yX-QXO"/>
+                <constraint firstItem="lXF-UM-mKi" firstAttribute="centerX" secondItem="Zvm-A1-wFB" secondAttribute="centerX" constant="-91" id="5nq-yX-QXO"/>
                 <constraint firstItem="DVF-Mb-TqP" firstAttribute="leading" secondItem="syS-hY-Dx5" secondAttribute="leading" constant="32" id="EyP-GV-HCo"/>
                 <constraint firstItem="Zvm-A1-wFB" firstAttribute="top" secondItem="SVl-Hy-v3v" secondAttribute="bottom" constant="8" symbolic="YES" id="HeO-gK-epn"/>
-                <constraint firstItem="FlB-TO-D3Y" firstAttribute="top" secondItem="lXF-UM-mKi" secondAttribute="bottom" constant="8" symbolic="YES" id="M5e-Ib-K1N"/>
+                <constraint firstItem="FlB-TO-D3Y" firstAttribute="top" secondItem="lXF-UM-mKi" secondAttribute="bottom" constant="-30" id="M5e-Ib-K1N"/>
                 <constraint firstItem="Zvm-A1-wFB" firstAttribute="leading" secondItem="syS-hY-Dx5" secondAttribute="leading" constant="70" id="RGt-fY-eG2"/>
-                <constraint firstItem="FlB-TO-D3Y" firstAttribute="centerX" secondItem="lXF-UM-mKi" secondAttribute="centerX" id="Uuz-Aw-g6f"/>
+                <constraint firstItem="FlB-TO-D3Y" firstAttribute="centerX" secondItem="lXF-UM-mKi" secondAttribute="centerX" constant="168.5" id="Uuz-Aw-g6f"/>
                 <constraint firstItem="SVl-Hy-v3v" firstAttribute="top" secondItem="DVF-Mb-TqP" secondAttribute="bottom" constant="27" id="Xbn-LC-L8F"/>
                 <constraint firstItem="SVl-Hy-v3v" firstAttribute="centerX" secondItem="DVF-Mb-TqP" secondAttribute="centerX" id="au2-Im-Znh"/>
                 <constraint firstItem="Zvm-A1-wFB" firstAttribute="centerX" secondItem="syS-hY-Dx5" secondAttribute="centerX" id="day-gG-Sd1"/>
-                <constraint firstItem="FlB-TO-D3Y" firstAttribute="bottom" secondItem="syS-hY-Dx5" secondAttribute="bottomMargin" id="dy1-PR-zjH"/>
+                <constraint firstItem="FlB-TO-D3Y" firstAttribute="bottom" secondItem="syS-hY-Dx5" secondAttribute="bottomMargin" constant="-68" id="dy1-PR-zjH"/>
                 <constraint firstItem="Zvm-A1-wFB" firstAttribute="centerX" secondItem="SVl-Hy-v3v" secondAttribute="centerX" id="uZJ-w7-Jer"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
