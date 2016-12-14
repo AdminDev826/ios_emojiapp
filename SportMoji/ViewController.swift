@@ -21,12 +21,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rateThisAppClicked(sender: UIButton) {
-        let appId = "com.hwrdprkns.SportMoji"
+        let appId = "1045427627"
         let url = "itms-apps://itunes.apple.com/app/id\(appId)"
         UIApplication.sharedApplication().openURL(NSURL(string: url)!)
     }
-    
-    @IBOutlet var labelView: UITextField!
 
     override func viewDidLoad() {
         let path = NSBundle.mainBundle().pathForResource("doji_video", ofType: "mov")
@@ -36,7 +34,7 @@ class ViewController: UIViewController {
         self.moviePlayer.prepareToPlay();
         self.moviePlayer.repeatMode = MPMovieRepeatMode.None
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerDidFinish:", name: MPMoviePlayerPlaybackDidFinishNotification, object: self.moviePlayer)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.moviePlayerDidFinish(_:)), name: MPMoviePlayerPlaybackDidFinishNotification, object: self.moviePlayer)
 
         self.videoContainer.addSubview(self.moviePlayer.view)
     }

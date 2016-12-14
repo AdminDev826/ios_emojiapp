@@ -14,6 +14,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     @IBOutlet var keyboardView: KeyboardView!
     @IBOutlet var grantAccessView: UIView!
     var collectionView: UICollectionView!
+    var toastView: UIView!
     
     static let kReuseIdentifier: String = "SportMojiCell"
     
@@ -60,6 +61,10 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         collectionView.registerClass(EmojiCell.self, forCellWithReuseIdentifier: KeyboardViewController.kReuseIdentifier)
         collectionView.dataSource = self
         self.view.addSubview(collectionView)
+        toastView = UIView(frame: collectionView.frame)
+        toastView.backgroundColor = UIColor.clearColor()
+        toastView.userInteractionEnabled = false
+        self.view.addSubview(toastView)
         self.keyboardView.deleteButton.hidden = isLandscape()
     }
     
@@ -123,6 +128,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         UIPasteboard.generalPasteboard().persistent = true
         let imageName = currentImages[indexPath.row + indexPath.section]
         let image = UIImage(named: imageName)!
+        self.toastView.makeToast("Doji copied. Now paste it!")
 
         UIPasteboard.generalPasteboard().image = scaleImageDown(image, scale: 0.85)
     }

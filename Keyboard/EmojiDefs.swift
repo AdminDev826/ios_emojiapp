@@ -34,20 +34,32 @@ struct EmojiDefs {
         "mutombo",
         "reggie_miller",
         "spurs_trio",
-        "wilt_chamberlain"
+        "wilt_chamberlain",
+        "kidd_kiss",
+        "wbbr",
+        "draymond_green_flex",
+        "lebron_wade_SECOND_VERSION_in_case_red_is_too_much",
+        "awing",
+        "vince",
+        "i_basket2"
     ]
 
     static let footballImages: [String] = [
         "cam_newton",
         "joe_horn",
-        "money_manziel",
         "joe_namath",
         "kevin_dyson",
         "terrell_owens",
         "randy_moss",
         "ray_lewis",
         "tebow",
-        "tony_gonzalez"
+        "tony_gonzalez",
+        "bradying",
+        "lynch",
+        "desmond_howard",
+        "brown",
+        "rodgers",
+        "MoneyManziel"
     ]
 
     static let miscImages: [String] = [
@@ -60,6 +72,13 @@ struct EmojiDefs {
         "tiger_woods",
         "derek_jeter",
         "kirk_gibson",
-        "mike_trout"
+        "mike_trout",
+        "bautista_flip",
+        "rousey",
+        "chastain",
+        "gretzky_99",
+        "jtsnow",
+        "odor",
+        "serena"
     ]
 }

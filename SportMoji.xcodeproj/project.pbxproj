@@ -19,6 +19,7 @@
 		2A40ED811B242DAC0000C2C2 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40ED801B242DAC0000C2C2 /* DeviceHelper.swift */; };
 		2A44A0301BE2DB5A00B2DF8E /* doji_video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2A44A02F1BE2DB5A00B2DF8E /* doji_video.mov */; };
 		2A44A0321BE2DC4F00B2DF8E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A44A0311BE2DC4F00B2DF8E /* MediaPlayer.framework */; };
+		2A5428DD1C9FD77200E6A2B8 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5428DC1C9FD77200E6A2B8 /* Toast.swift */; };
 		2A8176741C16443800A369DF /* GrantAccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A8176731C16443800A369DF /* GrantAccessView.xib */; };
 		2A84C59E1BB14BC10026E913 /* EmojiDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A84C59D1BB14BC10026E913 /* EmojiDefs.swift */; };
 		2AB250231B20E4FC005F6A4B /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB250221B20E4FC005F6A4B /* EmojiCell.swift */; };
@@ -75,6 +76,7 @@
 		2A40ED801B242DAC0000C2C2 /* DeviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		2A44A02F1BE2DB5A00B2DF8E /* doji_video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = doji_video.mov; sourceTree = "<group>"; };
 		2A44A0311BE2DC4F00B2DF8E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		2A5428DC1C9FD77200E6A2B8 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		2A8176731C16443800A369DF /* GrantAccessView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrantAccessView.xib; sourceTree = "<group>"; };
 		2A84C59D1BB14BC10026E913 /* EmojiDefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiDefs.swift; sourceTree = "<group>"; };
 		2AB250221B20E4FC005F6A4B /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				2A40ED801B242DAC0000C2C2 /* DeviceHelper.swift */,
 				2A84C59D1BB14BC10026E913 /* EmojiDefs.swift */,
 				2A8176731C16443800A369DF /* GrantAccessView.xib */,
+				2A5428DC1C9FD77200E6A2B8 /* Toast.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -263,7 +266,6 @@
 				TargetAttributes = {
 					2A2236831B1F0E8B006B13C1 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = G933384TAB;
 					};
 					2A2236981B1F0E8B006B13C1 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -271,7 +273,6 @@
 					};
 					2A2236AC1B1F0E98006B13C1 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = G933384TAB;
 					};
 				};
 			};
@@ -349,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB250271B20E8F9005F6A4B /* KeyboardView.swift in Sources */,
+				2A5428DD1C9FD77200E6A2B8 /* Toast.swift in Sources */,
 				2A40ED811B242DAC0000C2C2 /* DeviceHelper.swift in Sources */,
 				2A84C59E1BB14BC10026E913 /* EmojiDefs.swift in Sources */,
 				2AB2502D1B20F657005F6A4B /* KeyboardViewController.swift in Sources */,
@@ -408,7 +410,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -428,9 +431,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "b71781f0-06e5-4c38-8059-b76528004ab1";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,7 +458,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -467,8 +472,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "b71781f0-06e5-4c38-8059-b76528004ab1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -479,12 +485,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SportMoji/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hwrdprkns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b71781f0-06e5-4c38-8059-b76528004ab1";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -493,12 +502,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SportMoji/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hwrdprkns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b71781f0-06e5-4c38-8059-b76528004ab1";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -507,6 +519,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -527,6 +540,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -543,7 +558,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -551,9 +567,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Keyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hwrdprkns.SportMoji.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hwrdprkns.SportMoji.Keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5ea2962c-8e11-4cf1-a266-2ea293e203c7";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Keyboard/Keyboard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -565,13 +583,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = Keyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hwrdprkns.SportMoji.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hwrdprkns.SportMoji.Keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5ea2962c-8e11-4cf1-a266-2ea293e203c7";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Keyboard/Keyboard-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
