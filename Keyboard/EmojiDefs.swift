@@ -9,15 +9,15 @@
 import Foundation
 
 struct EmojiDefs {
-    enum Categories { case Basketball, Football, Baseball, Misc }
+    enum Categories { case basketball, football, baseball, misc }
 
-    static func imageForCategory(category: Categories) -> [String] {
+    static func imageForCategory(_ category: Categories) -> [String] {
         switch(category) {
-        case .Basketball:
+        case .basketball:
             return basketballImages
-        case .Football:
+        case .football:
             return footballImages
-        case .Misc:
+        case .misc:
             return miscImages
         default:
             return miscImages
@@ -59,7 +59,8 @@ struct EmojiDefs {
         "desmond_howard",
         "brown",
         "rodgers",
-        "MoneyManziel"
+        "MoneyManziel",
+        "kaepernick"
     ]
 
     static let miscImages: [String] = [

@@ -24,9 +24,9 @@ class EmojiCell: UICollectionViewCell {
         }
     }
     
-    override var selected: Bool {
+    override var isSelected: Bool {
         willSet {
-            self.selectedBackgroundView?.backgroundColor = selected ? UIColor.blackColor() : UIColor.whiteColor()
+            self.selectedBackgroundView?.backgroundColor = isSelected ? UIColor.black : UIColor.white
         }
     }
 }

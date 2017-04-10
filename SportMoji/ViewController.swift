@@ -15,26 +15,26 @@ class ViewController: UIViewController {
 
     var moviePlayer: MPMoviePlayerController!
 
-    @IBAction func goToSettingsClicked(sender: UIButton) {
-        let application = UIApplication.sharedApplication()
-        application.openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+    @IBAction func goToSettingsClicked(_ sender: UIButton) {
+        let application = UIApplication.shared
+        application.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
     }
 
-    @IBAction func rateThisAppClicked(sender: UIButton) {
+    @IBAction func rateThisAppClicked(_ sender: UIButton) {
         let appId = "1045427627"
         let url = "itms-apps://itunes.apple.com/app/id\(appId)"
-        UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+        UIApplication.shared.openURL(URL(string: url)!)
     }
 
     override func viewDidLoad() {
-        let path = NSBundle.mainBundle().pathForResource("doji_video", ofType: "mov")
-        let url = NSURL.fileURLWithPath(path!);
+        let path = Bundle.main.path(forResource: "doji_video", ofType: "mov")
+        let url = URL(fileURLWithPath: path!);
 
         self.moviePlayer = MPMoviePlayerController.init(contentURL: url);
         self.moviePlayer.prepareToPlay();
-        self.moviePlayer.repeatMode = MPMovieRepeatMode.None
+        self.moviePlayer.repeatMode = MPMovieRepeatMode.none
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.moviePlayerDidFinish(_:)), name: MPMoviePlayerPlaybackDidFinishNotification, object: self.moviePlayer)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.moviePlayerDidFinish(_:)), name: NSNotification.Name.MPMoviePlayerPlaybackDidFinish, object: self.moviePlayer)
 
         self.videoContainer.addSubview(self.moviePlayer.view)
     }
@@ -44,11 +44,11 @@ class ViewController: UIViewController {
         self.moviePlayer.play()
     }
 
-    func moviePlayerDidFinish(notif: NSNotification) {
+    func moviePlayerDidFinish(_ notif: Notification) {
         if notif.object as! MPMoviePlayerController == self.moviePlayer {
             let object = notif.userInfo![MPMoviePlayerPlaybackDidFinishReasonUserInfoKey]
             let reason = object as! NSInteger
-            if MPMovieFinishReason.PlaybackEnded == MPMovieFinishReason.init(rawValue: reason) {
+            if MPMovieFinishReason.playbackEnded == MPMovieFinishReason.init(rawValue: reason) {
                 self.moviePlayer.play()
             }
         }

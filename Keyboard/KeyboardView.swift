@@ -16,30 +16,30 @@ protocol KeyboardActionHandler {
     func miscCategoryButtonClicked()
 }
 
-@objc public class KeyboardView: UIView {
+@objc open class KeyboardView: UIView {
     
     var delegate: KeyboardActionHandler?
     
     @IBOutlet var deleteButton: UIButton!
     @IBOutlet var nextKeyboardButton: UIButton!
     
-    @IBAction func nextKeyboardButtonClicked(sender: UIButton) {
+    @IBAction func nextKeyboardButtonClicked(_ sender: UIButton) {
         delegate?.nextKeyboardButtonClicked()
     }
     
-    @IBAction func firstCategoryButtonClicked(sender: UIButton) {
+    @IBAction func firstCategoryButtonClicked(_ sender: UIButton) {
         delegate?.firstCategoryButtonClicked()
     }
     
-    @IBAction func secondCategoryButtonClicked(sender: UIButton) {
+    @IBAction func secondCategoryButtonClicked(_ sender: UIButton) {
         delegate?.secondCategoryButtonClicked()
     }
     
-    @IBAction func deleteButtonClicked(sender: UIButton) {
+    @IBAction func deleteButtonClicked(_ sender: UIButton) {
         delegate?.deleteButtonClicked()
     }
     
-    @IBAction func miscCategoryButtonClicked(sender: UIButton) {
+    @IBAction func miscCategoryButtonClicked(_ sender: UIButton) {
         delegate?.miscCategoryButtonClicked()
     }
 }

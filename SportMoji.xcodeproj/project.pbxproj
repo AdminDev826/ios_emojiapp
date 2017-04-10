@@ -266,13 +266,18 @@
 				TargetAttributes = {
 					2A2236831B1F0E8B006B13C1 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 8GZUA4EWAF;
+						LastSwiftMigration = 0820;
 					};
 					2A2236981B1F0E8B006B13C1 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 2A2236831B1F0E8B006B13C1;
 					};
 					2A2236AC1B1F0E98006B13C1 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 8GZUA4EWAF;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -487,13 +492,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
+				DEVELOPMENT_TEAM = 8GZUA4EWAF;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SportMoji/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hwrdprkns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b71781f0-06e5-4c38-8059-b76528004ab1";
+				PROVISIONING_PROFILE = "bc051082-154f-4df8-86d6-a8b6ba579288";
+				PROVISIONING_PROFILE_SPECIFIER = dev_doji_main;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -504,13 +512,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
+				DEVELOPMENT_TEAM = 8GZUA4EWAF;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SportMoji/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hwrdprkns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b71781f0-06e5-4c38-8059-b76528004ab1";
+				PROVISIONING_PROFILE = "bc051082-154f-4df8-86d6-a8b6ba579288";
+				PROVISIONING_PROFILE_SPECIFIER = dev_doji_main;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -532,6 +543,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hwrdprkns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SportMoji.app/SportMoji";
 			};
 			name = Debug;
@@ -550,6 +562,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hwrdprkns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SportMoji.app/SportMoji";
 			};
 			name = Release;
@@ -561,20 +574,23 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8GZUA4EWAF;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Keyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hwrdprkns.SportMoji.Keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5ea2962c-8e11-4cf1-a266-2ea293e203c7";
+				PROVISIONING_PROFILE = "7af8f23f-3ea6-4666-8504-3c1dfd9857bb";
+				PROVISIONING_PROFILE_SPECIFIER = dev_doji_keyboard;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Keyboard/Keyboard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -586,15 +602,18 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vu Moji Company, LLC (8GZUA4EWAF)";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8GZUA4EWAF;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = Keyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hwrdprkns.SportMoji.Keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5ea2962c-8e11-4cf1-a266-2ea293e203c7";
+				PROVISIONING_PROFILE = "7af8f23f-3ea6-4666-8504-3c1dfd9857bb";
+				PROVISIONING_PROFILE_SPECIFIER = dev_doji_keyboard;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Keyboard/Keyboard-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
